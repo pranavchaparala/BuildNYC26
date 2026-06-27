@@ -18,13 +18,13 @@ export default async function FlowsLayout({ children }: { children: React.ReactN
       {/* Left sidebar */}
       <aside className="w-52 shrink-0 flex flex-col gap-3 p-3 overflow-y-auto">
         {/* Logo card */}
-        <div className="bg-white rounded-xl px-4 py-3 flex items-center gap-2.5 shrink-0">
-          <img src="/icon.png" alt="" className="w-6 h-6" />
+        <div className="card px-4 py-3 flex items-center gap-2.5 shrink-0">
+          <img src="/icon.svg" alt="" className="w-6 h-6" />
           <span className="font-semibold text-ink-900 tracking-tight text-sm">Loupe</span>
         </div>
 
         {/* Flows card */}
-        <div className="bg-white rounded-xl p-2 flex-1 flex flex-col justify-between">
+        <div className="card p-2 flex-1 flex flex-col justify-between">
           <FlowSidebar flows={flowList} />
           <div className="pt-2 border-t border-ink-100 mt-2">
             <Link

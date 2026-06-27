@@ -156,7 +156,7 @@ function FlowContextMenu({
         onClick={onClose}
       />
       <div className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none">
-        <div className="bg-white rounded-2xl shadow-2xl w-full max-w-[260px] pointer-events-auto animate-scale-in overflow-hidden">
+        <div className="bg-white rounded-2xl shadow-popover w-full max-w-[260px] pointer-events-auto animate-scale-in overflow-hidden">
           <div className="px-4 pt-4 pb-2">
             <p className="text-xs text-ink-400">Flow</p>
             <p className="text-sm font-medium text-ink-900 truncate">{flowName}</p>
@@ -226,7 +226,7 @@ function RenameFlowModal({ flow, onClose }: { flow: SidebarFlow; onClose: () => 
         onClick={onClose}
       />
       <div className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none">
-        <div className="bg-white rounded-2xl shadow-2xl w-full max-w-sm pointer-events-auto animate-scale-in">
+        <div className="bg-white rounded-2xl shadow-popover w-full max-w-sm pointer-events-auto animate-scale-in">
           <div className="p-6">
             <h2 className="text-base font-semibold text-ink-900 mb-5">Rename flow</h2>
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
@@ -311,7 +311,7 @@ function DeleteFlowModal({
         onClick={onClose}
       />
       <div className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none">
-        <div className="bg-white rounded-2xl shadow-2xl w-full max-w-sm pointer-events-auto animate-scale-in">
+        <div className="bg-white rounded-2xl shadow-popover w-full max-w-sm pointer-events-auto animate-scale-in">
           <div className="p-6">
             <h2 className="text-base font-semibold text-ink-900 mb-2">Delete flow?</h2>
             <p className="text-sm text-ink-500 leading-relaxed mb-5">

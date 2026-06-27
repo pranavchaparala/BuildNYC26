@@ -29,7 +29,20 @@ export async function addScreensToFlow(formData: FormData) {
   const db = createSupabaseClient();
 
   const flowId = formData.get('flowId') as string;
-  const files = formData.getAll('screens') as File[];
+
+  // Files are sent under distinct keys (screen_0, screen_1, …) because
+  // multiple File entries under a single key do not reliably survive the
+  // server-action boundary.
+  const count = Number(formData.get('count') ?? 0);
+  const files: File[] = [];
+  for (let i = 0; i < count; i++) {
+    const f = formData.get(`screen_${i}`);
+    if (f instanceof File) files.push(f);
+  }
+  // Fallback for any caller still using the legacy single key.
+  if (files.length === 0) {
+    files.push(...(formData.getAll('screens').filter(f => f instanceof File) as File[]));
+  }
 
   if (!flowId) throw new Error('Flow ID is required');
   if (!files.length) throw new Error('No files provided');

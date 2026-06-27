@@ -73,7 +73,7 @@ export default async function FlowPage({ params, searchParams }: PageProps) {
   return (
     <div className="flex flex-col gap-3 pb-3">
       {/* ── Screen grid ── */}
-      <div className="bg-white rounded-xl p-6">
+      <div className="card p-6">
         <div className="flex items-center gap-3 mb-6">
           <h1 className="text-xl font-semibold text-ink-900">{flow.name}</h1>
           {screens.length > 0 && (
@@ -108,7 +108,7 @@ export default async function FlowPage({ params, searchParams }: PageProps) {
       </div>
 
       {/* ── Previous critiques ── */}
-      <div className="bg-white rounded-xl p-6">
+      <div className="card p-6">
         <h2 className="text-lg font-semibold text-ink-900 mb-1">Previous Critique</h2>
         {audits.length === 0 ? (
           <p className="text-sm text-ink-400 mt-3">
@@ -135,7 +135,7 @@ export default async function FlowPage({ params, searchParams }: PageProps) {
 
       {/* ── Critique detail (only when ?v=N is set) ── */}
       {currentAudit && (
-        <div className="bg-white rounded-xl p-6">
+        <div className="card p-6">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-lg font-semibold text-ink-900">
               Critique v{currentAudit.version}

@@ -40,7 +40,7 @@ export function NewFlowModal({ onClose }: { onClose: () => void }) {
 
       {/* Modal */}
       <div className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none">
-        <div className="bg-white rounded-2xl shadow-2xl w-full max-w-sm pointer-events-auto animate-scale-in">
+        <div className="bg-white rounded-2xl shadow-popover w-full max-w-sm pointer-events-auto animate-scale-in">
           <div className="p-6">
             <div className="flex items-center justify-between mb-5">
               <h2 className="text-base font-semibold text-ink-900">New flow</h2>

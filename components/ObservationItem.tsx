@@ -31,6 +31,14 @@ export function ObservationItem({ observation, isHighlighted, onClick }: Observa
         )}
       </div>
       <p className="text-sm text-ink-700 leading-relaxed">{observation.body}</p>
+      {observation.action && (
+        <div className="flex gap-2 rounded-lg bg-ink-50 px-3 py-2.5">
+          <span className="text-[10px] font-mono uppercase tracking-widest text-ink-300 shrink-0 pt-0.5">
+            {observation.type === 'strong' ? 'Protect' : 'Do this'}
+          </span>
+          <p className="text-sm text-ink-700 leading-relaxed">{observation.action}</p>
+        </div>
+      )}
     </button>
   );
 }

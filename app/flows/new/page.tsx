@@ -25,7 +25,7 @@ export default function NewFlowPage() {
 
   return (
     <div className="max-w-lg pt-4">
-      <div className="bg-white rounded-xl p-7">
+      <div className="card p-7">
         <h1 className="text-lg font-semibold text-ink-900 mb-1">New flow</h1>
         <p className="text-sm text-ink-400 mb-7">
           Give it a name. Add screens after.

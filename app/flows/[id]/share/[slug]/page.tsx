@@ -62,7 +62,7 @@ export default async function SharePage({ params }: PageProps) {
       <header className="border-b border-ink-100">
         <div className="mx-auto max-w-3xl px-6 h-14 flex items-center justify-between">
           <span className="flex items-center gap-2 font-semibold text-ink-900 tracking-tight">
-            <img src="/icon.png" alt="" className="w-5 h-5" />
+            <img src="/icon.svg" alt="" className="w-5 h-5" />
             Loupe
           </span>
           <Link

@@ -18,7 +18,7 @@ export default async function FlowsPage() {
 
   return (
     <div className="h-full flex items-center justify-center">
-      <div className="bg-white rounded-xl p-12 text-center max-w-sm w-full flex flex-col items-center gap-6">
+      <div className="card p-12 text-center max-w-sm w-full flex flex-col items-center gap-6">
         <div className="w-12 h-12 rounded-full bg-ink-50 flex items-center justify-center">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <circle cx="10" cy="10" r="8" stroke="#A8A8A8" strokeWidth="1.5" />

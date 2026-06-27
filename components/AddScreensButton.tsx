@@ -20,8 +20,8 @@ export function AddScreensButton({ flowId }: { flowId: string }) {
     try {
       const fd = new FormData();
       fd.set('flowId', flowId);
-      images.forEach(f => fd.append('screens', f));
-      fd.set('order', JSON.stringify(images.map((_, i) => i)));
+      fd.set('count', String(images.length));
+      images.forEach((f, i) => fd.append(`screen_${i}`, f));
       await addScreensToFlow(fd);
       router.refresh();
     } catch (err) {

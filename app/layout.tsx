@@ -11,13 +11,13 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Loupe — AI Design Critique',
   description: 'An AI critique partner that analyzes your product flows for craft, not errors.',
-  icons: { icon: '/icon.png' },
+  icons: { icon: '/icon.svg' },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className="bg-canvas text-ink-900 antialiased">
+    <html lang="en" className={inter.variable} suppressHydrationWarning>
+      <body className="bg-canvas text-ink-900 antialiased" suppressHydrationWarning>
         {children}
       </body>
     </html>
